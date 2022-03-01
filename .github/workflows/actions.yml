@@ -22,6 +22,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: Simple JS
         id: greet
         uses: actions/hello-world-javascript-action@v1
