@@ -2,6 +2,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Test-Input
+on:
 
   workflow_dispatch:
     inputs:
