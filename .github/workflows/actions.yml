@@ -22,13 +22,19 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: List Files
+      - name: List Files and GitHub Variables
         run: |
           pwd
           ls -a
           echo sha: $GITHUB_SHA
           echo repo: $GITHUB_REPOSITORY
           echo wk: $GITHUB_WORKSPACE
+      - name: Checkout from GitHub
+        uses: actions/checkout@v1
+      - name: List after checkout
+        run: |
+          pwd
+          ls -a
       - name: Simple JS
         id: greet
         uses: actions/hello-world-javascript-action@v1
