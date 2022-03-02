@@ -25,7 +25,10 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls
+          ls -a
+          echo sha: $GITHUB_SHA
+          echo repo: $GITHUB_REPOSITORY
+          echo wk: $GITHUB_WORKSPACE
       - name: Simple JS
         id: greet
         uses: actions/hello-world-javascript-action@v1
